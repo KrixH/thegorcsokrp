@@ -1,5 +1,4 @@
-/* style.css */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -10,36 +9,76 @@ body {
     margin: 0;
 }
 
-/* Egyedi háttér effekt */
-.radial-bg {
-    background: radial-gradient(circle, rgba(59,130,246,0.1) 0%, rgba(15,23,42,1) 70%);
+.nav-scrolled {
+    background: rgba(5, 7, 10, 0.98);
+    padding: 1rem 0 !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Kártya animációk */
-.feature-card {
-    transition: all 0.3s ease;
+.nav-link {
+    transition: color 0.3s;
+    position: relative;
 }
 
-.feature-card:hover {
-    transform: translateY(-10px);
-    background-color: rgba(30, 41, 59, 0.8);
-    border-color: rgba(59, 130, 246, 0.5);
-}
-
-/* Görgetősáv design */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #0f172a;
-}
-
-::-webkit-scrollbar-thumb {
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
     background: #3b82f6;
-    border-radius: 5px;
+    transition: width 0.3s;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #2563eb;
+.nav-link:hover::after { width: 100%; }
+
+.text-shadow-glow {
+    text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
 }
+
+/* Feature kártyák */
+.feature-card:hover {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.08);
+    transform: translateY(-4px);
+}
+
+/* Szabály kártyák */
+.rule-card:hover {
+    background: rgba(59, 130, 246, 0.03);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.05);
+    transform: translateY(-2px);
+}
+
+/* FAQ */
+.faq-answer {
+    animation: fadeIn 0.3s ease;
+}
+
+.faq-question i.rotate-45 {
+    transform: rotate(45deg);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Statisztikák */
+.stat-number {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Step kártyák */
+.step-card {
+    transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-6px);
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #05070a; }
+::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 10px; }
