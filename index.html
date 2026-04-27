@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheGörcsök | FiveM Szerver</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind a gyors layoutért -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-[#0f172a] text-white">
+
+    <!-- Navigáció -->
+    <nav class="fixed w-full z-50 bg-[#0f172a]/90 backdrop-blur-sm border-b border-white/10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+            <div class="logo text-2xl font-black text-blue-500">THEGÖRCSÖK</div>
+            <div class="hidden md:flex space-x-8 font-semibold">
+                <a href="#home" class="hover:text-blue-400 transition">Főoldal</a>
+                <a href="#features" class="hover:text-blue-400 transition">Jellemzők</a>
+                <a href="#rules" class="hover:text-blue-400 transition">Szabályzat</a>
+                <a href="#staff" class="hover:text-blue-400 transition">Csapat</a>
+            </div>
+          <!--  <button onclick="copyIP()" class="bg-blue-600 px-6 py-2 rounded-lg font-bold hover:bg-blue-700 transition">
+                IP MÁSOLÁSA
+            </button>-->
+        </div>
+    </nav>
+
+    <!-- Hero Szekció -->
+    <section id="home" class="h-screen flex flex-col items-center justify-center text-center px-4 relative overflow-hidden">
+        <div class="absolute inset-0 bg-blue-500/5 radial-bg -z-10"></div>
+        <h1 class="text-6xl md:text-8xl font-black mb-6 uppercase tracking-tighter">The <span class="text-blue-500">Görcsök</span></h1>
+        <p class="text-xl text-gray-400 max-w-2xl mb-10 leading-relaxed">
+            Csatlakozz Magyarország legdinamikusabb FiveM közösségéhez, ahol a minőségi RP az első.
+        </p>
+        <div class="flex gap-4">
+            <a href="https://discord.com/invite/Y98A4SVSP4" class="bg-[#5865F2] px-8 py-4 rounded-xl font-bold flex items-center gap-2 hover:scale-105 transition">
+                <i class="fab fa-discord"></i> Discord
+            </a>
+            <a href="#features" class="bg-slate-800 px-8 py-4 rounded-xl font-bold hover:bg-slate-700 transition">
+                Tudj meg többet
+            </a>
+        </div>
+    </section>
+
+    <!-- Jellemzők -->
+    <section id="features" class="max-w-7xl mx-auto py-24 px-6 grid md:grid-cols-3 gap-8">
+        <div class="feature-card p-10 rounded-3xl bg-slate-800/50 border border-white/5">
+            <i class="fas fa-server text-4xl text-blue-500 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">Lagg-mentes Játék</h3>
+            <p class="text-gray-400">Dedikált hardverek biztosítják a folyamatos élményt minden játékosnak.</p>
+        </div>
+        <div class="feature-card p-10 rounded-3xl bg-slate-800/50 border border-white/5">
+            <i class="fas fa-car text-4xl text-blue-500 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">Egyedi Járművek</h3>
+            <p class="text-gray-400">Saját fejlesztésű handlingek és több száz import autó vár rád.</p>
+        </div>
+        <div class="feature-card p-10 rounded-3xl bg-slate-800/50 border border-white/5">
+            <i class="fas fa-users text-4xl text-blue-500 mb-6"></i>
+            <h3 class="text-2xl font-bold mb-4">Erős Közösség</h3>
+            <p class="text-gray-400">Nálunk a játékosok véleménye számít a fejlesztési irányoknál.</p>
+        </div>
+    </section>
+
+    <!-- Szabályzat -->
+    <section id="rules" class="bg-slate-900/50 py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-black mb-12 text-center underline decoration-blue-500 decoration-4">Szabályzat</h2>
+            <div class="space-y-4">
+                <div class="rule-box p-6 bg-slate-800 rounded-2xl border-l-4 border-blue-500">
+                    <h4 class="text-xl font-bold">1. Ne légy toxikus</h4>
+                    <p class="text-gray-400 mt-2 text-sm">Mindenkivel szemben legyél tiszteletteljes, függetlenül a helyzettől.</p>
+                </div>
+                <div class="rule-box p-6 bg-slate-800 rounded-2xl border-l-4 border-blue-500">
+                    <h4 class="text-xl font-bold">2. Realistic Roleplay</h4>
+                    <p class="text-gray-400 mt-2 text-sm">A karakterednek megfelelően cselekedj, ne rontsd el mások élményét.</p>
+                </div>
+                <div class="rule-box p-6 bg-slate-800 rounded-2xl border-l-4 border-blue-500">
+                    <h4 class="text-xl font-bold">3. Admin utasítások</h4>
+                    <p class="text-gray-400 mt-2 text-sm">Az adminisztrátorok szava döntő, vitának helye nincs játék közben.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Csapat -->
+    <section id="staff" class="max-w-7xl mx-auto py-24 px-6 text-center">
+        <h2 class="text-4xl font-black mb-16">Vezetőség</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10">
+            <div class="staff-member">
+                <img src="https://cdn.discordapp.com/avatars/219693331096141836/9375f5d2ace505c0f5cc4f8afca4ff89.webp?size=100" alt="GörcsAdmin" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-blue-500 object-cover shadow-lg shadow-blue-500/20">
+                <h4 class="text-xl font-bold">KrixH99</h4>
+                <p class="text-blue-400">Tulajdonos</p>
+            </div>
+            <!-- <div class="staff-member">
+                <div class="w-32 h-32 bg-slate-700 rounded-full mx-auto mb-4 border-4 border-white/10 flex items-center justify-center text-4xl font-bold">D</div>
+                <h4 class="text-xl font-bold">DevMax</h4>
+                <p class="text-gray-400">Fejlesztő</p>
+            </div>
+            <div class="staff-member">
+                <div class="w-32 h-32 bg-slate-700 rounded-full mx-auto mb-4 border-4 border-white/10 flex items-center justify-center text-4xl font-bold">M</div>
+                <h4 class="text-xl font-bold">ModiPeti</h4>
+                <p class="text-gray-400">Admin</p>
+            </div>
+            <div class="staff-member">
+                <div class="w-32 h-32 bg-slate-700 rounded-full mx-auto mb-4 border-4 border-white/10 flex items-center justify-center text-4xl font-bold">S</div>
+                <h4 class="text-xl font-bold">SzuperAdmin</h4>
+                <p class="text-gray-400">Vezető Admin</p>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="py-12 border-t border-white/5 bg-slate-950 text-center text-gray-500">
+    <p>&copy; 2021 - <span id="current-year"></span> TheGörcsök</p>TheGörcsök FiveM. Minden jog fenntartva.</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
